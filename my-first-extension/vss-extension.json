@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 1,
+    "id": "my-first-extension",
+    "publisher": "AndrewWard",
+    "version": "1.0.45",
+    "name": "My First Extension 1.0.45",
+    "description": "A sample Visual Studio Services extension",
+    "public": false,
+    "categories": ["Azure Repos"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "my-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "My Hub",
+                "uri": "my-hub.html"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.code"
+      ],
+    "files": [
+        {
+            "path": "my-hub.html",
+            "addressable": true
+        },
+        {
+            "path": "scripts/main.js",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}
